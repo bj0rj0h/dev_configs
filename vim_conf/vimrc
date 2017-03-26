@@ -1,0 +1,33 @@
+execute pathogen#infect()
+syntax on
+filetype plugin indent on
+
+" General conf
+
+set number
+set rnu
+
+filetype plugin indent on
+" show existing tab with 4 spaces width
+set tabstop=4
+" " when indenting with '>', use 4 spaces width
+set shiftwidth=4
+" " On pressing tab, insert 4 spaces
+set expandtab
+
+
+" VIM-GO conf
+set autowrite
+
+map <C-n> :cnext<CR>
+map <C-m> :cprevious<CR>
+nnoremap <leader>a :cclose<CR>
+
+
+autocmd FileType go nmap <leader>b  <Plug>(go-build)
+autocmd FileType go nmap <leader>r  <Plug>(go-run)
+
+" Solarized conf
+syntax enable
+set background=dark
+colorscheme solarized
